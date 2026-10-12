@@ -24,6 +24,9 @@ export interface Post {
   tags?: Taxonomy[];
   author?: string;
 
+  /** ID da peça do catálogo (src/data/catalogo.json) que ativa o rodapé comercial do blog, ex: "sao-bento" */
+  santo?: string;
+
   metadata?: MetaData;
 
   draft?: boolean;

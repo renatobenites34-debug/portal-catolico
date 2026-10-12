@@ -75,5 +75,8 @@
     },
     "deepmerge-ts": ">=8.0.2",
     "fast-uri": "^3.1.6"
+  },
+  "allowScripts": {
+    "esbuild@0.28.1": true
   }
 }

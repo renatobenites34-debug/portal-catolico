@@ -1,0 +1,50 @@
+[
+  {
+    "id": "sao-bento",
+    "nome": "São Bento Abade",
+    "descricao": "Escultura sacra de alta definição em resina com acabamento clássico.",
+    "shopee_url": "https://shopee.com.br",
+    "mercadolivre_url": "https://mercadolivre.com.br",
+    "imagem": "/images/sao-bento.jpg"
+  },
+  {
+    "id": "nossa-senhora-aparecida",
+    "nome": "Nossa Senhora Aparecida",
+    "descricao": "Imagem da Padroeira do Brasil em resina importada, pintura à mão e rico em detalhes dourados.",
+    "shopee_url": "https://shopee.com.br",
+    "mercadolivre_url": "https://mercadolivre.com.br",
+    "imagem": "/images/nossa-senhora-aparecida.jpg"
+  },
+  {
+    "id": "sagrado-coracao-jesus",
+    "nome": "Sagrado Coração de Jesus",
+    "descricao": "Peça clássica do Sagrado Coração em resina premium, ideal para oratório doméstico.",
+    "shopee_url": "https://shopee.com.br",
+    "mercadolivre_url": "https://mercadolivre.com.br",
+    "imagem": "/images/sagrado-coracao-jesus.jpg"
+  },
+  {
+    "id": "sao-miguel-arcanjo",
+    "nome": "São Miguel Arcanjo",
+    "descricao": "Escultura imponente do Arcanjo Miguel em luta contra o mal, acabamento em resina policromada.",
+    "shopee_url": "https://shopee.com.br",
+    "mercadolivre_url": "https://mercadolivre.com.br",
+    "imagem": "/images/sao-miguel-arcanjo.jpg"
+  },
+  {
+    "id": "santa-teresinha",
+    "nome": "Santa Teresinha do Menino Jesus",
+    "descricao": "Imagem delicada de Santa Teresinha com rosas, símbolo das graças derramadas do Céu.",
+    "shopee_url": "https://shopee.com.br",
+    "mercadolivre_url": "https://mercadolivre.com.br",
+    "imagem": "/images/santa-teresinha.jpg"
+  },
+  {
+    "id": "sao-jose",
+    "nome": "São José com o Menino Jesus",
+    "descricao": "Imagem do Patriarca São José carregando o Menino, protetor das famílias e dos trabalhadores.",
+    "shopee_url": "https://shopee.com.br",
+    "mercadolivre_url": "https://mercadolivre.com.br",
+    "imagem": "/images/sao-jose.jpg"
+  }
+]

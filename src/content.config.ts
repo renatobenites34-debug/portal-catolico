@@ -64,6 +64,9 @@ const postCollection = defineCollection({
     tags: z.array(z.string()).optional(),
     author: z.string().optional(),
 
+    /** ID da peça do catálogo (src/data/catalogo.json) que ativa o rodapé comercial automático, ex: "sao-bento" */
+    santo: z.string().optional(),
+
     metadata: metadataDefinition(),
   }),
 });

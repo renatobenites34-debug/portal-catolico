@@ -1,34 +1,32 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: 'Oratório & Fé - Devoção e Arte Sacra'
+  site: 'https://oratorioefe.com.br'
   base: '/'
   trailingSlash: false
-
-  googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
 
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: 'Oratório & Fé - Devoção e Arte Sacra'
+    template: '%s — Oratório & Fé'
+  description: 'Portal católico de devoção, vida dos santos, notícias da Igreja e arte sacra. Aprofunde sua fé com artigos, orações e peças sacras selecionadas.'
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: 'Oratório & Fé - Devoção e Arte Sacra'
     images:
       - url: '~/assets/images/default.png'
         width: 1200
         height: 628
     type: website
   twitter:
-    handle: '@arthelokyo'
-    site: '@arthelokyo'
+    handle: ''
+    site: ''
     cardType: summary_large_image
 
 i18n:
-  language: en
+  language: pt-BR
   textDirection: ltr
 
 apps:

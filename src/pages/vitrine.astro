@@ -1,0 +1,32 @@
+---
+import PageLayout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import PecaCard from '~/components/sacra/PecaCard.astro';
+import catalogo from '~/data/catalogo.json';
+
+const metadata = {
+  title: 'Vitrine Sacra — Esculturas e Imagens de Devoção',
+  description:
+    'Peças sacras selecionadas para o seu oratório: imagens de santos em resina de alta definição. Adquira com segurança pela Shopee ou Mercado Livre.',
+};
+---
+
+<PageLayout metadata={metadata}>
+  <Hero>
+    <Fragment slot="title">Vitrine Sacra</Fragment>
+    <Fragment slot="subtitle">
+      Peças selecionadas para o seu oratório doméstico. Cada imagem é escolhida pela qualidade do acabamento e pela
+      fidelidade à iconografia tradicional. As compras são finalizadas com segurança nos marketplaces parceiros.
+    </Fragment>
+  </Hero>
+
+  <section class="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
+    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {catalogo.map((peca) => <PecaCard peca={peca} />)}
+    </div>
+    <p class="mt-12 rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900 dark:border-amber-800 dark:bg-amber-950 dark:text-amber-200">
+      As transações são realizadas integralmente nos marketplaces (Shopee e Mercado Livre), que garantem pagamento
+      seguro e política de devolução. O Oratório &amp; Fé participa como afiliado, sem custo adicional para você.
+    </p>
+  </section>
+</PageLayout>

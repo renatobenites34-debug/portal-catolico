@@ -1,0 +1,56 @@
+---
+import Image from '~/components/common/Image.astro';
+
+interface Peca {
+  id: string;
+  nome: string;
+  descricao: string;
+  shopee_url: string;
+  mercadolivre_url: string;
+  imagem: string;
+}
+
+interface Props {
+  peca: Peca;
+}
+
+const { peca } = Astro.props;
+---
+
+<article
+  class="flex flex-col overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md dark:border-slate-700 dark:bg-slate-900"
+>
+  <div class="aspect-square w-full overflow-hidden bg-[#f5f1e8] dark:bg-slate-800">
+    <Image
+      src={peca.imagem}
+      alt={`Escultura sacra: ${peca.nome}`}
+      width={600}
+      height={600}
+      widths={[300, 600]}
+      class="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+      loading="lazy"
+    />
+  </div>
+  <div class="flex flex-1 flex-col p-5">
+    <h3 class="text-lg font-bold text-heading">{peca.nome}</h3>
+    <p class="mt-2 flex-1 text-sm text-muted">{peca.descricao}</p>
+    <div class="mt-4 flex flex-col gap-2">
+      <a
+        href={peca.shopee_url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center rounded-lg bg-[#ee4d2d] px-4 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+      >
+        Comprar na Shopee
+      </a>
+      <a
+        href={peca.mercadolivre_url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center rounded-lg bg-[#3483fa] px-4 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+      >
+        Comprar no Mercado Livre
+      </a>
+    </div>
+  </div>
+</article>

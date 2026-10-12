@@ -1,0 +1,61 @@
+---
+import Image from '~/components/common/Image.astro';
+import catalogo from '~/data/catalogo.json';
+
+interface Props {
+  santo?: string; // id do santo no catalogo.json, ex: "sao-bento"
+}
+
+const { santo } = Astro.props;
+
+// Encontra a peça correspondente: pelo id explícito ou ignorando silenciosamente
+const peca = santo ? catalogo.find((p) => p.id === santo) : undefined;
+---
+
+{
+  peca && (
+    <aside class="not-prose my-10 overflow-hidden rounded-xl border border-amber-200 bg-gradient-to-br from-amber-50 to-white shadow-sm dark:border-amber-800 dark:from-amber-950/40 dark:to-slate-900">
+      <div class="flex flex-col sm:flex-row">
+        <div class="w-full shrink-0 bg-[#f5f1e8] sm:w-48 dark:bg-slate-800">
+          <Image
+            src={peca.imagem}
+            alt={`Escultura sacra: ${peca.nome}`}
+            width={400}
+            height={400}
+            widths={[200, 400]}
+            class="h-48 w-full object-cover sm:h-full"
+            loading="lazy"
+          />
+        </div>
+        <div class="flex flex-1 flex-col p-6">
+          <span class="text-xs font-semibold uppercase tracking-wide text-amber-700 dark:text-amber-400">
+            Da nossa Vitrine Sacra
+          </span>
+          <h4 class="mt-1 text-xl font-bold text-heading">{peca.nome}</h4>
+          <p class="mt-2 flex-1 text-sm text-muted">{peca.descricao}</p>
+          <div class="mt-4 flex flex-wrap gap-3">
+            <a
+              href={peca.shopee_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center rounded-lg bg-[#ee4d2d] px-4 py-2 text-sm font-semibold text-white hover:opacity-90"
+            >
+              Ver na Shopee
+            </a>
+            <a
+              href={peca.mercadolivre_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center rounded-lg bg-[#3483fa] px-4 py-2 text-sm font-semibold text-white hover:opacity-90"
+            >
+              Ver no Mercado Livre
+            </a>
+          </div>
+          <p class="mt-3 text-xs text-muted">
+            Link de afiliado: ao comprar, você apoia a missão do Oratório &amp; Fé sem pagar nada a mais.
+          </p>
+        </div>
+      </div>
+    </aside>
+  )
+}
